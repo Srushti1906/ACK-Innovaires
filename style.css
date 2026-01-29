@@ -1,0 +1,300 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0B0F1A;
+color:#E6D28F;
+font-family:'Source Sans Pro',sans-serif;
+}
+
+h1,h2,h3,h4{
+font-family:'DM Sans',sans-serif;
+color:#D4AF37;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#121826;
+padding:16px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #D4AF37;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.nav-left img{
+height:42px;
+}
+
+.navbar a{
+color:#E6D28F;
+margin-left:24px;
+text-decoration:none;
+font-weight:600;
+transition:color .3s;
+}
+
+.navbar a:hover{
+color:#D4AF37;
+}
+
+/* INTRO VIDEO */
+
+.intro-video{
+height:100vh;
+background:black;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+.intro-video video{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+.scroll-indicator{
+color:#D4AF37;
+margin-top:-60px;
+font-size:14px;
+animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(8px);}
+}
+
+/* SECTIONS */
+
+.section{
+padding:100px 15%;
+text-align:center;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+/* CARD HOVER */
+
+.card{
+background:#121826;
+padding:30px;
+border-radius:18px;
+border:1px solid #D4AF37;
+color:#E6D28F;
+text-decoration:none;
+transition:transform .4s, box-shadow .4s;
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 15px 40px rgba(212,175,55,.4);
+}
+
+/* ICON */
+
+.service-icon{
+font-size:28px;
+color:#D4AF37;
+margin-bottom:12px;
+}
+
+/* TEAM */
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:40px;
+margin-top:50px;
+}
+
+.member img{
+width:150px;
+height:150px;
+border-radius:50%;
+border:4px solid #D4AF37;
+object-fit:cover;
+transition:transform .4s;
+}
+
+.member img:hover{
+transform:scale(1.05);
+}
+
+/* LINKEDIN */
+
+.linkedin-btn{
+margin-top:12px;
+display:inline-block;
+padding:8px 22px;
+border-radius:30px;
+border:2px solid #D4AF37;
+color:#D4AF37;
+text-decoration:none;
+transition:background .3s,color .3s;
+}
+
+.linkedin-btn:hover{
+background:#D4AF37;
+color:#071739;
+}
+
+/* CTA */
+
+.cta{
+background:#071739;
+padding:90px 15%;
+text-align:center;
+}
+
+.cta-buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+/* BUTTON ANIMATION */
+
+.btn-primary{
+background:#D4AF37;
+color:#071739;
+padding:14px 36px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:transform .3s, box-shadow .3s;
+}
+
+.btn-primary:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #D4AF37;
+}
+
+.btn-secondary{
+border:2px solid #D4AF37;
+color:#D4AF37;
+padding:14px 36px;
+border-radius:30px;
+text-decoration:none;
+transition:background .3s,color .3s;
+}
+
+.btn-secondary:hover{
+background:#D4AF37;
+color:#071739;
+}
+
+/* FOOTER */
+
+footer{
+background:#071739;
+color:#E6D28F;
+text-align:center;
+padding:30px;
+}
+/* NAV GLOW ON CLICK */
+
+.navbar a.active{
+  color:#071739;
+  background:#D4AF37;
+  padding:6px 14px;
+  border-radius:20px;
+  box-shadow:0 0 15px #D4AF37;
+}
+/* NAVBAR HOVER GLOW EFFECT */
+
+.navbar a{
+  padding:6px 14px;
+  border-radius:20px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover{
+  color:#071739;
+  background:#D4AF37;
+  box-shadow:0 0 15px #D4AF37, 
+             0 0 30px rgba(212,175,55,0.6);
+}
+/* =====================
+   MOBILE RESPONSIVE FIX
+   ===================== */
+
+@media (max-width: 768px){
+
+  /* Navbar spacing */
+  .navbar{
+    padding:12px 6%;
+    flex-wrap:wrap;
+  }
+
+  .navbar nav{
+    margin-top:10px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+  }
+
+  .navbar a{
+    margin-left:0;
+    font-size:14px;
+  }
+
+  /* Intro video smaller height */
+  .intro-video{
+    height:80vh;
+  }
+
+  /* Section padding reduced */
+  .section{
+    padding:70px 8%;
+  }
+
+  /* Grid auto stacks */
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  /* Team smaller */
+  .member img{
+    width:120px;
+    height:120px;
+  }
+
+  .team-grid{
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  }
+
+  /* Buttons fit screen */
+  .cta-buttons{
+    flex-direction:column;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    width:80%;
+    margin:auto;
+  }
+}
