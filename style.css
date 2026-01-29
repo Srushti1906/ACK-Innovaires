@@ -216,14 +216,15 @@ text-align:center;
 padding:30px;
 }
 /* NAV GLOW ON CLICK */
-
-.navbar a.active{
+.navbar a:hover{
   color:#071739;
   background:#D4AF37;
-  padding:6px 14px;
-  border-radius:20px;
-  box-shadow:0 0 15px #D4AF37;
+  box-shadow:0 0 15px #D4AF37, 
+             0 0 30px rgba(212,175,55,0.6);
 }
+
+
+
 /* NAVBAR HOVER GLOW EFFECT */
 
 .navbar a{
