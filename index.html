@@ -30,7 +30,8 @@
 <!-- INTRO VIDEO -->
 
 <section class="intro-video">
-  <video autoplay muted loop playsinline>
+  <video autoplay muted playsinline>
+
     <source src="logo-animation.mp4" type="video/mp4">
   </video>
 
@@ -192,16 +193,7 @@
 <footer>
 © 2026 ACK Innovaires. Where Innovation Happens Unexpectedly.
 </footer>
-<script>
-const navLinks = document.querySelectorAll('.navbar a');
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-  });
-});
-</script>
 
 </body>
 </html>
